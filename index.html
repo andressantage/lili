@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF--8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Estudio de Contabilidad y Presupuestos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+        }
+        .section-card {
+            margin-bottom: 2rem;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,.05);
+            border-radius: 15px;
+        }
+        .section-card-header {
+            background-color: #0d6efd;
+            color: white;
+            font-family: 'Lato', sans-serif;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .accordion-button:not(.collapsed) {
+            color: #0c63e4;
+            background-color: #e7f1ff;
+        }
+        .question {
+            font-weight: bold;
+        }
+        .options {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .options li {
+            margin-bottom: 0.5rem;
+        }
+        .correct-answer {
+            color: #198754;
+            font-weight: bold;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Guía de Estudio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contabilidad-general">Contabilidad General</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contabilidad-costos">Contabilidad de Costos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#presupuestos">Presupuestos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <h1 class="display-4">Guía de Estudio Interactivo</h1>
+            <p class="lead">Resúmenes, ejemplos y preguntas de Contabilidad y Presupuestos.</p>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <section id="contabilidad-general" class="pt-5">
+            <div class="card section-card">
+                <div class="card-header section-card-header p-3">
+                    <h2 class="h4 mb-0">Asignatura: Contabilidad General</h2>
+                </div>
+                <div class="card-body p-4">
+                    <p><strong>Profesor:</strong> Mg. Carolina Jaramillo (cjaramillo@uisrael.edu.ec)</p>
+
+                    <h3 class="mt-4">Resumen de la Asignatura</h3>
+                    <p>La Contabilidad General se centra en el **ciclo contable**, un proceso sistemático y ordenado que registra, clasifica y resume todas las transacciones económicas de una empresa durante un período. Este ciclo comienza con la **jornalización**, donde cada transacción se anota en el libro diario. Luego, en la **mayorización**, la información se transfiere a las cuentas individuales en el libro mayor. Al final del período, se realizan **ajustes contables** para reconocer ingresos y gastos no registrados. El **balance de comprobación** verifica la igualdad de débitos y créditos. Finalmente, se procede al **cierre de libros**, preparando las cuentas para el siguiente período, y se elaboran los **estados financieros**, como el Balance General y el Estado de Resultados, que muestran la salud financiera de la organización.</p>
+
+                    <h3 class="mt-4">Ejemplos por Tema</h3>
+                    <div class="accordion" id="accordionGeneral">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral1">
+                                    <strong>1. Jornalización (Libro Diario)</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseGeneral1" class="accordion-collapse collapse show" data-bs-parent="#accordionGeneral">
+                                <div class="accordion-body">
+                                    <p><strong>Ejemplo 1: Compra de mercadería al contado.</strong> La empresa "Comercial XYZ" compra mercadería por $500 y paga en efectivo.</p>
+                                    <pre class="bg-light p-2 rounded">-------------- x --------------
+Inventario de Mercadería     500
+    Caja                              500
+P/R Compra de mercadería.</pre>
+                                    <p><strong>Ejemplo 2: Venta de servicios a crédito.</strong> La empresa presta servicios de asesoría por $1,200. El cliente pagará en 30 días.</p>
+                                    <pre class="bg-light p-2 rounded">-------------- x --------------
+Cuentas por Cobrar          1,200
+    Ingresos por Servicios          1,200
+P/R Venta de servicios a crédito.</pre>
+                                    <p><strong>Ejemplo 3: Pago de sueldos.</strong> Se pagan los sueldos del mes por $2,500 mediante transferencia bancaria.</p>
+                                    <pre class="bg-light p-2 rounded">-------------- x --------------
+Gasto Sueldos               2,500
+    Bancos                            2,500
+P/R Pago de sueldos del mes.</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral2">
+                                    <strong>2. Mayorización (Mayor en T)</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseGeneral2" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+                                <div class="accordion-body">
+                                    <p>La mayorización consiste en pasar los valores del libro diario a las cuentas T correspondientes.</p>
+                                    <p><strong>Ejemplo 1: Mayorización de la cuenta "Caja".</strong> Si la empresa tenía un saldo inicial de $1,000 y realizó la compra del ejemplo anterior por $500.</p>
+                                    <pre class="bg-light p-2 rounded">
+        Caja
+--------------------
+Debe      | Haber
+1,000     | 500
+          |
+Saldo D. 500</pre>
+                                    <p><strong>Ejemplo 2: Mayorización de la cuenta "Gasto Sueldos".</strong> Basado en el pago de sueldos del ejemplo anterior.</p>
+                                     <pre class="bg-light p-2 rounded">
+   Gasto Sueldos
+--------------------
+Debe      | Haber
+2,500     | 
+          |
+Saldo D. 2,500</pre>
+                                    <p><strong>Ejemplo 3: Mayorización de "Cuentas por Cobrar".</strong> Basado en la venta a crédito del ejemplo anterior, y suponiendo un cobro posterior de $600.</p>
+                                     <pre class="bg-light p-2 rounded">
+ Cuentas por Cobrar
+--------------------
+Debe      | Haber
+1,200     | 600
+          |
+Saldo D. 600</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral3">
+                                    <strong>3. Ajustes Contables</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseGeneral3" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+                                <div class="accordion-body">
+                                    <p><strong>Ejemplo 1: Depreciación de activo fijo.</strong> Un vehículo valorado en $20,000 tiene una depreciación anual de $4,000. El ajuste al final del año es:</p>
+                                    <pre class="bg-light p-2 rounded">-------------- x --------------
+Gasto Depreciación Vehículo   4,000
+    Depreciación Acum. Vehículo   4,000
+P/R Registro de la depreciación anual.</pre>
+                                    <p><strong>Ejemplo 2: Gasto de arriendo pagado por anticipado.</strong> Se pagó $3,000 por 3 meses de arriendo. Al final del primer mes, se debe reconocer el gasto correspondiente ($1,000).</p>
+                                     <pre class="bg-light p-2 rounded">-------------- x --------------
+Gasto Arriendo              1,000
+    Arriendo Pagado por Anticipado   1,000
+P/R Devengo del arriendo del mes.</pre>
+                                    <p><strong>Ejemplo 3: Ingreso por interés ganado no cobrado.</strong> El banco nos informa que hemos ganado $150 de interés en una inversión, pero se acreditará el próximo mes.</p>
+                                     <pre class="bg-light p-2 rounded">-------------- x --------------
+Intereses por Cobrar          150
+    Ingreso por Intereses            150
+P/R Reconocimiento de interés ganado.</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral4">
+                                    <strong>4. Balance de Comprobación</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseGeneral4" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+                                <div class="accordion-body">
+                                    <p>Verifica que la suma de los saldos deudores sea igual a la suma de los saldos acreedores.</p>
+                                    <p><strong>Ejemplo 1: Balance de comprobación simple.</strong></p>
+                                    <table class="table table-bordered">
+                                        <thead><tr><th>Cuenta</th><th>Debe</th><th>Haber</th></tr></thead>
+                                        <tbody>
+                                            <tr><td>Caja</td><td>$1,500</td><td></td></tr>
+                                            <tr><td>Bancos</td><td>$8,000</td><td></td></tr>
+                                            <tr><td>Cuentas por Pagar</td><td></td><td>$2,000</td></tr>
+                                            <tr><td>Capital</td><td></td><td>$7,500</td></tr>
+                                            <tr><td><strong>Total</strong></td><td><strong>$9,500</strong></td><td><strong>$9,500</strong></td></tr>
+                                        </tbody>
+                                    </table>
+                                    <p><strong>Ejemplo 2 y 3:</strong> El formato es siempre el mismo, listando todas las cuentas de la empresa con sus respectivos saldos en la columna "Debe" o "Haber". El objetivo es que las sumas finales sean idénticas, demostrando el equilibrio de la partida doble.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral5">
+                                    <strong>5. Cierre de Libros y Estados Financieros</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseGeneral5" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+                                <div class="accordion-body">
+                                    <p><strong>Ejemplo 1: Asiento de cierre de cuentas de ingreso.</strong> Si la empresa tuvo ingresos por ventas de $10,000, el asiento para cerrar esta cuenta es:</p>
+                                    <pre class="bg-light p-2 rounded">-------------- x --------------
+Ingresos por Ventas        10,000
+    Pérdidas y Ganancias          10,000
+P/R Cierre de cuenta de ingresos.</pre>
+                                    <p><strong>Ejemplo 2: Creación de un Estado de Resultados simple.</strong></p>
+                                    <pre class="bg-light p-2 rounded">
+Ingresos por Ventas      $10,000
+(-) Costo de Ventas      ($4,000)
+(=) Utilidad Bruta       $6,000
+(-) Gastos Operativos    ($3,500)
+(=) Utilidad Neta        $2,500</pre>
+                                    <p><strong>Ejemplo 3: Estructura de un Balance General simple.</strong></p>
+                                    <pre class="bg-light p-2 rounded">
+Activos                Pasivos
+Caja          $1,000   Cuentas por Pagar  $3,000
+Bancos        $5,000
+Cuentas Cobrar$4,000   Patrimonio
+                       Capital            $6,000
+                       Utilidad del Ej.   $1,000
+Total Activo $10,000   Total Pasivo+Pat. $10,000</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-4">Preguntas de Autoevaluación</h3>
+                    <div class="accordion" id="questionsGeneral">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuestionsG1">
+                                    Preguntas 1 - 15
+                                </button>
+                            </h2>
+                            <div id="collapseQuestionsG1" class="accordion-collapse collapse show" data-bs-parent="#questionsGeneral">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li><p class="question">¿En qué etapa del ciclo contable se registran las transacciones por primera vez?</p>
+                                            <ul class="options"><li>A) Mayorización</li><li class="correct-answer">B) Jornalización</li><li>C) Balance de Comprobación</li></ul></li>
+                                        <li><p class="question">El proceso de transferir información del libro diario al libro mayor se llama:</p>
+                                            <ul class="options"><li>A) Ajuste</li><li>B) Cierre</li><li class="correct-answer">C) Mayorización</li></ul></li>
+                                        <li><p class="question">¿Cuál es el propósito principal del Balance de Comprobación?</p>
+                                            <ul class="options"><li class="correct-answer">A) Verificar que la suma de débitos sea igual a la de créditos</li><li>B) Calcular la utilidad neta</li><li>C) Cerrar las cuentas de resultados</li></ul></li>
+                                        <li><p class="question">Un asiento de ajuste por depreciación afecta a:</p>
+                                            <ul class="options"><li>A) Caja y Capital</li><li class="correct-answer">B) Gasto por depreciación y Depreciación acumulada</li><li>C) Ingresos y Cuentas por cobrar</li></ul></li>
+                                        <li><p class="question">¿Qué estado financiero muestra la situación económica de la empresa en una fecha específica?</p>
+                                            <ul class="options"><li>A) Estado de Resultados</li><li class="correct-answer">B) Balance General</li><li>C) Flujo de Efectivo</li></ul></li>
+                                        <li><p class="question">Si una empresa compra suministros de oficina a crédito, el asiento contable incluye un:</p>
+                                            <ul class="options"><li>A) Crédito a Bancos</li><li class="correct-answer">B) Crédito a Cuentas por Pagar</li><li>C) Débito a Caja</li></ul></li>
+                                        <li><p class="question">Las cuentas de ingresos, costos y gastos se cierran contra una cuenta temporal llamada:</p>
+                                            <ul class="options"><li>A) Utilidades Retenidas</li><li class="correct-answer">B) Pérdidas y Ganancias</li><li>C) Capital Social</li></ul></li>
+                                        <li><p class="question">¿Qué representa el libro mayor?</p>
+                                            <ul class="options"><li class="correct-answer">A) El registro de todas las transacciones agrupadas por cuenta</li><li>B) El primer registro de una transacción</li><li>C) Un resumen de los activos solamente</li></ul></li>
+                                        <li><p class="question">El pago de un servicio básico (agua, luz) en efectivo se registra como:</p>
+                                            <ul class="options"><li>A) Débito a Bancos, Crédito a Gasto</li><li class="correct-answer">B) Débito a Gasto, Crédito a Caja</li><li>C) Débito a Cuentas por Pagar, Crédito a Caja</li></ul></li>
+                                        <li><p class="question">El principio de la partida doble establece que:</p>
+                                            <ul class="options"><li>A) Toda transacción tiene solo un débito</li><li>B) Todo ingreso genera un activo</li><li class="correct-answer">C) No hay deudor sin acreedor, y la suma de débitos debe ser igual a la de créditos</li></ul></li>
+                                        <li><p class="question">¿Cuál de las siguientes es una cuenta de activo?</p>
+                                            <ul class="options"><li>A) Cuentas por Pagar</li><li class="correct-answer">B) Inventario de Mercadería</li><li>C) Ingresos por Ventas</li></ul></li>
+                                        <li><p class="question">El Estado de Resultados resume:</p>
+                                            <ul class="options"><li>A) Los activos y pasivos</li><li class="correct-answer">B) Los ingresos y gastos durante un período</li><li>C) Las entradas y salidas de efectivo</li></ul></li>
+                                        <li><p class="question">Un ajuste por un gasto de seguro pagado por adelantado que se ha consumido implica:</p>
+                                            <ul class="options"><li class="correct-answer">A) Debitar un gasto y acreditar el activo pagado por adelantado</li><li>B) Debitar el activo y acreditar un pasivo</li><li>C) Debitar caja y acreditar un ingreso</li></ul></li>
+                                        <li><p class="question">La ecuación contable fundamental es:</p>
+                                            <ul class="options"><li>A) Activo = Pasivo - Patrimonio</li><li>B) Ingresos - Gastos = Patrimonio</li><li class="correct-answer">C) Activo = Pasivo + Patrimonio</li></ul></li>
+                                        <li><p class="question">¿Cuál es el último paso del ciclo contable antes de iniciar el siguiente período?</p>
+                                            <ul class="options"><li>A) Jornalización</li><li class="correct-answer">B) Cierre de libros</li><li>C) Mayorización</li></ul></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuestionsG2">
+                                    Preguntas 16 - 30
+                                </button>
+                            </h2>
+                            <div id="collapseQuestionsG2" class="accordion-collapse collapse" data-bs-parent="#questionsGeneral">
+                                <div class="accordion-body">
+                                    <ol start="16">
+                                        <li><p class="question">Una venta de mercadería al contado aumenta:</p>
+                                            <ul class="options"><li class="correct-answer">A) Caja y los Ingresos por Ventas</li><li>B) Cuentas por Cobrar y los Ingresos</li><li>C) Inventario y Caja</li></ul></li>
+                                        <li><p class="question">La cuenta "Depreciación Acumulada" es una:</p>
+                                            <ul class="options"><li>A) Cuenta de gasto</li><li>B) Cuenta de activo</li><li class="correct-answer">C) Cuenta complementaria de activo (contra-activo)</li></ul></li>
+                                        <li><p class="question">Si los débitos no igualan a los créditos en el balance de comprobación, significa que:</p>
+                                            <ul class="options"><li>A) La empresa tuvo pérdidas</li><li class="correct-answer">B) Hubo un error en el registro o mayorización</li><li>C) Es momento de realizar los asientos de cierre</li></ul></li>
+                                        <li><p class="question">¿Cuál de los siguientes es un estado financiero básico?</p>
+                                            <ul class="options"><li>A) El libro diario</li><li class="correct-answer">B) El Estado de Flujo de Efectivo</li><li>C) El libro mayor</li></ul></li>
+                                        <li><p class="question">El aporte de capital de un socio en efectivo se registra como:</p>
+                                            <ul class="options"><li>A) Débito a Capital, Crédito a Caja</li><li class="correct-answer">B) Débito a Caja, Crédito a Capital</li><li>C) Débito a Bancos, Crédito a Cuentas por Pagar</li></ul></li>
+                                        <li><p class="question">Un ingreso ganado pero aún no cobrado se registra como un ajuste que incluye:</p>
+                                            <ul class="options"><li>A) Un crédito a Caja</li><li class="correct-answer">B) Un débito a Cuentas por Cobrar</li><li>C) Un débito a Gastos</li></ul></li>
+                                        <li><p class="question">La cuenta "Cuentas por Pagar" tiene normalmente un saldo:</p>
+                                            <ul class="options"><li>A) Deudor</li><li class="correct-answer">B) Acreedor</li><li>C) Cero</li></ul></li>
+                                        <li><p class="question">El propósito de los asientos de cierre es:</p>
+                                            <ul class="options"><li>A) Verificar la igualdad de débitos y créditos</li><li class="correct-answer">B) Dejar en cero las cuentas de resultados para el nuevo período</li><li>C) Registrar la depreciación de los activos</li></ul></li>
+                                        <li><p class="question">¿Qué es un pasivo?</p>
+                                            <ul class="options"><li>A) Un recurso económico de la empresa</li><li class="correct-answer">B) Una obligación o deuda de la empresa</li><li>C) La inversión de los dueños</li></ul></li>
+                                        <li><p class="question">La compra de un edificio con un préstamo bancario implica:</p>
+                                            <ul class="options"><li>A) Un aumento de un activo y disminución de otro activo</li><li class="correct-answer">B) Un aumento de un activo y un aumento de un pasivo</li><li>C) Un aumento de un pasivo y una disminución de patrimonio</li></ul></li>
+                                        <li><p class="question">¿Qué cuenta se debita al registrar la venta de un producto?</p>
+                                            <ul class="options"><li class="correct-answer">A) Costo de Ventas</li><li>B) Inventario</li><li>C) Ingreso por Ventas</li></ul></li>
+                                        <li><p class="question">El Balance General también es conocido como:</p>
+                                            <ul class="options"><li>A) Estado de Pérdidas y Ganancias</li><li class="correct-answer">B) Estado de Situación Financiera</li><li>C) Estado de Capital Contable</li></ul></li>
+                                        <li><p class="question">Un gasto incurrido pero no pagado al final del período requiere un ajuste que incluye:</p>
+                                            <ul class="options"><li>A) Un débito a Caja</li><li>B) Un crédito a Gastos</li><li class="correct-answer">C) Un crédito a Cuentas por Pagar (o Gasto Acumulado)</li></ul></li>
+                                        <li><p class="question">¿Qué sección del Balance General incluye las Utilidades Retenidas?</p>
+                                            <ul class="options"><li>A) Activo</li><li>B) Pasivo</li><li class="correct-answer">C) Patrimonio</li></ul></li>
+                                        <li><p class="question">La primera columna en un asiento del libro diario corresponde a:</p>
+                                            <ul class="options"><li>A) El monto</li><li>B) El nombre de la cuenta</li><li class="correct-answer">C) La fecha</li></ul></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-4">Bibliografía</h3>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Autor(es)</th>
+                                <th>Año</th>
+                                <th>URL / Ubicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fundamentos de contabilidad</td>
+                                <td>Muñoz Orcera, R. et al.</td>
+                                <td>2020</td>
+                                <td><a href="https://elibro.net/es/lc/uisrael/titulos/218332" target="_blank">elibro.net</a></td>
+                            </tr>
+                            <tr>
+                                <td>Fundamentos de contabilidad II: práctica en República Dominicana</td>
+                                <td>González Polanco, F.</td>
+                                <td>2022</td>
+                                <td><a href="https://elibro.net/es/lc/uisrael/titulos/227801" target="_blank">elibro.net</a></td>
+                            </tr>
+                            <tr>
+                                <td>Contabilidad General con base a las NIIF</td>
+                                <td>Zapata, Pedro</td>
+                                <td>2024</td>
+                                <td>En biblioteca</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="contabilidad-costos" class="pt-5">
+             <div class="card section-card">
+                <div class="card-header section-card-header p-3" style="background-color: #198754;">
+                    <h2 class="h4 mb-0">Asignatura: Contabilidad de Costos</h2>
+                </div>
+                <div class="card-body p-4">
+                     <p><strong>Profesor:</strong> Mg. Carolina Jaramillo (cjaramillo@uisrael.edu.ec)</p>
+
+                    <h3 class="mt-4">Resumen de la Asignatura</h3>
+                    <p>La Contabilidad de Costos es una rama especializada que se enfoca en medir, analizar y reportar los costos de producción de una empresa industrial. Comienza con la **clasificación de los costos** (fijos, variables, directos, indirectos) para distintos propósitos. Su objetivo principal es determinar el costo unitario de un producto, lo que se refleja en estados financieros específicos como el **Estado de Costo de Producción**. Se estudian dos sistemas de acumulación de costos: por **órdenes de trabajo**, para producción heterogénea y bajo pedido; y por **procesos**, para producción masiva y continua. Además, se analizan herramientas de control como el **costo estándar**, que compara los costos reales con los presupuestados, y la relación **Costo-Volumen-Utilidad (CVU)**, que permite calcular el **punto de equilibrio** para la toma de decisiones gerenciales.</p>
+                    
+                    <h3 class="mt-4">Ejemplos por Tema</h3>
+                    <div class="accordion" id="accordionCostos">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCostos1">
+                                    <strong>1. Clasificación de los costos</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseCostos1" class="accordion-collapse collapse show" data-bs-parent="#accordionCostos">
+                                <div class="accordion-body">
+                                    <p><strong>Ejemplo 1: Costos Directos vs. Indirectos.</strong> En una fábrica de sillas de madera:</p>
+                                    <ul>
+                                        <li><strong>Directo:</strong> La madera utilizada para cada silla, el salario del carpintero que la ensambla.</li>
+                                        <li><strong>Indirecto:</strong> El pegamento, los clavos, el sueldo del supervisor de la fábrica.</li>
+                                    </ul>
+                                    <p><strong>Ejemplo 2: Costos Fijos vs. Variables.</strong> En una pizzería:</p>
+                                     <ul>
+                                        <li><strong>Variable:</strong> El costo de la harina, queso y tomate (aumenta con cada pizza vendida).</li>
+                                        <li><strong>Fijo:</strong> El arriendo del local, el sueldo del administrador (no cambia si se venden 10 o 100 pizzas en un día).</li>
+                                    </ul>
+                                    <p><strong>Ejemplo 3: Costos de Producción vs. Gastos del Período.</strong> En una empresa que fabrica zapatos:</p>
+                                     <ul>
+                                        <li><strong>De Producción:</strong> El cuero, la suela, el salario de los zapateros (se activan en el inventario).</li>
+                                        <li><strong>Del Período:</strong> El sueldo del personal de ventas, la publicidad (se van al gasto inmediatamente).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCostos2">
+                                    <strong>2. Estados Financieros de Empresas Industriales</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseCostos2" class="accordion-collapse collapse" data-bs-parent="#accordionCostos">
+                                <div class="accordion-body">
+                                    <p><strong>Ejemplo 1: Estructura del Estado de Costo de Producción y Ventas.</strong></p>
+                                    <pre class="bg-light p-2 rounded">
+Inventario Inicial de Materia Prima
++ Compras de Materia Prima
+= Materia Prima Disponible
+- Inventario Final de Materia Prima
+= Materia Prima Directa Consumida
++ Mano de Obra Directa
++ Costos Indirectos de Fabricación
+= Costo de Producción del Período
++ Inventario Inicial de Productos en Proceso
+- Inventario Final de Productos en Proceso
+= Costo de Artículos Terminados
++ Inventario Inicial de Productos Terminados
+- Inventario Final de Productos Terminados
+= Costo de Ventas</pre>
+                                    <p><strong>Ejemplo 2 y 3:</strong> La lógica se mantiene. El Estado de Resultados de una empresa industrial es similar al de una comercial, pero su "Costo de Ventas" no proviene de una simple compra, sino que se calcula a través del complejo Estado de Costo de Producción y Ventas, que resume toda la actividad de la planta de producción.</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCostos3">
+                                    <strong>3. Sistema de Costos por Órdenes de Trabajo</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseCostos3" class="accordion-collapse collapse" data-bs-parent="#accordionCostos">
+                                <div class="accordion-body">
+                                    <p><strong>Ejemplo 1: Una imprenta.</strong> Recibe un pedido para imprimir 500 invitaciones de boda (Orden #001). Se acumulan los costos de papel especial (MD), tinta (MD), el tiempo del impresor (MOD) y una porción de la electricidad y depreciación de la máquina (CIF) específicamente para esa orden.</p>
+                                    <p><strong>Ejemplo 2: Un taller mecánico.</strong> Repara un motor de un auto (Orden #205). Se registran los costos de los repuestos (MD), las horas del mecánico (MOD) y los costos indirectos del taller (herramientas, lubricantes, luz) para determinar el costo total de esa reparación.</p>
+                                    <p><strong>Ejemplo 3: Una agencia de publicidad.</strong> Crea una campaña para un cliente (Orden #C-30). Se costea el tiempo de los diseñadores y creativos (MOD), el costo de software y material de oficina (CIF) para saber cuánto costó desarrollar esa campaña en particular.</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCostos4">
+                                    <strong>4. Sistema de Costos por Procesos</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseCostos4" class="accordion-collapse collapse" data-bs-parent="#accordionCostos">
+                                <div class="accordion-body">
+                                    <p><strong>Ejemplo 1: Una fábrica de refrescos.</strong> Los costos de jarabe, agua, gas y embotellado se acumulan en los departamentos (Mezclado, Embotellado) durante un mes. El costo total se divide por el número de litros producidos para obtener un costo promedio por litro.</p>
+                                    <p><strong>Ejemplo 2: Una refinería de petróleo.</strong> El costo del crudo y los químicos se asigna al proceso de refinación. El costo total se distribuye entre los productos resultantes (gasolina, diésel) según un método de asignación.</p>
+                                    <p><strong>Ejemplo 3: Un fabricante de cemento.</strong> Los costos de materia prima, energía y mano de obra se acumulan en los procesos (Trituración, Molienda, Empacado). El costo por saco de cemento se determina promediando los costos totales entre la producción total.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCostos5">
+                                    <strong>5. Costo Estándar y Relación Costo-Volumen-Utilidad</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseCostos5" class="accordion-collapse collapse" data-bs-parent="#accordionCostos">
+                                <div class="accordion-body">
+                                    <p><strong>Ejemplo 1 (Costo Estándar):</strong> Una panadería establece que el costo estándar de un pan es $0.20. Si al final del día el costo real fue de $0.22 por pan, existe una **varianza desfavorable** de $0.02 que debe ser investigada (¿subió la harina?, ¿hubo desperdicio?).</p>
+                                    <p><strong>Ejemplo 2 (Punto de Equilibrio):</strong> Una cafetería vende cada café a $2.00. El costo variable (vaso, café, leche) es de $0.80. Sus costos fijos mensuales (arriendo, sueldos) son $1,200. El punto de equilibrio es: $1,200 / ($2.00 - $0.80) = 1,000 cafés al mes. Necesita vender 1,000 cafés solo para cubrir sus costos.</p>
+                                    <p><strong>Ejemplo 3 (Utilidad Deseada):</strong> Usando el ejemplo anterior, si la cafetería desea ganar $600 de utilidad, debe vender: ($1,200 Fijos + $600 Utilidad) / ($1.20 Margen) = 1,500 cafés al mes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-4">Preguntas de Autoevaluación</h3>
+                     <div class="accordion" id="questionsCostos">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuestionsC1">
+                                    Preguntas 1 - 15
+                                </button>
+                            </h2>
+                            <div id="collapseQuestionsC1" class="accordion-collapse collapse show" data-bs-parent="#questionsCostos">
+                                <div class="accordion-body">
+                                     <ol>
+                                        <li><p class="question">El salario de un supervisor de planta es un costo:</p>
+                                            <ul class="options"><li class="correct-answer">A) Indirecto y Fijo</li><li>B) Directo y Variable</li><li>C) Directo y Fijo</li></ul></li>
+                                        <li><p class="question">¿Qué sistema de costeo es más apropiado para un astillero que construye yates a medida?</p>
+                                            <ul class="options"><li>A) Costeo por procesos</li><li class="correct-answer">B) Costeo por órdenes de trabajo</li><li>C) Costeo estándar</li></ul></li>
+                                        <li><p class="question">El punto de equilibrio es el nivel de ventas donde:</p>
+                                            <ul class="options"><li>A) La utilidad es máxima</li><li>B) Los costos fijos son cero</li><li class="correct-answer">C) La utilidad es igual a cero</li></ul></li>
+                                        <li><p class="question">¿Cuál de los siguientes es un costo variable?</p>
+                                            <ul class="options"><li class="correct-answer">A) Materia prima directa</li><li>B) El arriendo de la fábrica</li><li>C) La depreciación de la maquinaria (línea recta)</li></ul></li>
+                                        <li><p class="question">El Estado de Costo de Producción determina el:</p>
+                                            <ul class="options"><li>A) La utilidad neta de la empresa</li><li class="correct-answer">B) El costo de los artículos terminados durante el período</li><li>C) El valor del inventario final de materia prima</li></ul></li>
+                                        <li><p class="question">Un costo estándar es un:</p>
+                                            <ul class="options"><li>A) Costo histórico</li><li class="correct-answer">B) Costo predeterminado o presupuestado</li><li>C) Costo real incurrido</li></ul></li>
+                                        <li><p class="question">En la fórmula del punto de equilibrio, el denominador es:</p>
+                                            <ul class="options"><li>A) Costos fijos totales</li><li class="correct-answer">B) Margen de contribución por unidad</li><li>C) Precio de venta por unidad</li></ul></li>
+                                        <li><p class="question">La Mano de Obra Directa (MOD) se refiere al trabajo:</p>
+                                            <ul class="options"><li class="correct-answer">A) Que transforma directamente la materia prima en producto terminado</li><li>B) Del personal administrativo</li><li>C) De los supervisores de la planta</li></ul></li>
+                                        <li><p class="question">Una varianza favorable en el costo estándar significa que:</p>
+                                            <ul class="options"><li>A) El costo real fue mayor que el estándar</li><li class="correct-answer">B) El costo real fue menor que el estándar</li><li>C) No hubo diferencias entre el costo real y el estándar</li></ul></li>
+                                        <li><p class="question">¿Qué empresa usaría un sistema de costeo por procesos?</p>
+                                            <ul class="options"><li>A) Un bufete de abogados</li><li>B) Un taller de ebanistería</li><li class="correct-answer">C) Una fábrica de gaseosas</li></ul></li>
+                                        <li><p class="question">Los tres elementos del costo de producción son:</p>
+                                            <ul class="options"><li>A) Activo, Pasivo y Patrimonio</li><li class="correct-answer">B) Materia Prima Directa, Mano de Obra Directa y Costos Indirectos de Fabricación</li><li>C) Costos Fijos, Variables y Mixtos</li></ul></li>
+                                        <li><p class="question">El "margen de contribución" se calcula como:</p>
+                                            <ul class="options"><li>A) Ventas - Costos Fijos</li><li class="correct-answer">B) Precio de Venta - Costo Variable Unitario</li><li>C) Ventas - Costo de Ventas</li></ul></li>
+                                        <li><p class="question">Los costos indirectos de fabricación (CIF) incluyen:</p>
+                                            <ul class="options"><li class="correct-answer">A) Energía eléctrica de la planta, depreciación de maquinaria, salario del supervisor</li><li>B) Salarios de los vendedores</li><li>C) Materia prima principal</li></ul></li>
+                                        <li><p class="question">Si los costos fijos aumentan, el punto de equilibrio:</p>
+                                            <ul class="options"><li>A) Disminuye</li><li class="correct-answer">B) Aumenta</li><li>C) No cambia</li></ul></li>
+                                        <li><p class="question">El costo primo está formado por:</p>
+                                            <ul class="options"><li>A) MOD + CIF</li><li class="correct-answer">B) MD + MOD</li><li>C) MD + CIF</li></ul></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuestionsC2">
+                                    Preguntas 16 - 30
+                                </button>
+                            </h2>
+                            <div id="collapseQuestionsC2" class="accordion-collapse collapse" data-bs-parent="#questionsCostos">
+                                <div class="accordion-body">
+                                    <ol start="16">
+                                        <li><p class="question">La principal diferencia entre el estado de resultados de una empresa comercial y una industrial es:</p>
+                                            <ul class="options"><li>A) La forma de calcular los impuestos</li><li class="correct-answer">B) El cálculo del Costo de Ventas</li><li>C) Los gastos de administración</li></ul></li>
+                                        <li><p class="question">En un sistema por procesos, los costos se acumulan por:</p>
+                                            <ul class="options"><li>A) Cliente</li><li class="correct-answer">B) Departamento o proceso</li><li>C) Orden de trabajo</li></ul></li>
+                                        <li><p class="question">¿Qué es un costo de conversión?</p>
+                                            <ul class="options"><li>A) Materia Prima + Mano de Obra</li><li class="correct-answer">B) Mano de Obra Directa + Costos Indirectos de Fabricación</li><li>C) Materia Prima + Costos Indirectos de Fabricación</li></ul></li>
+                                        <li><p class="question">El análisis Costo-Volumen-Utilidad asume que el comportamiento de los costos es:</p>
+                                            <ul class="options"><li>A) Curvilíneo</li><li class="correct-answer">B) Lineal dentro de un rango relevante</li><li>C) Impredecible</li></ul></li>
+                                        <li><p class="question">La hoja de costos es el documento central en el sistema de:</p>
+                                            <ul class="options"><li>A) Costeo por procesos</li><li class="correct-answer">B) Costeo por órdenes de trabajo</li><li>C) Costeo directo</li></ul></li>
+                                        <li><p class="question">Si el precio de venta unitario aumenta y lo demás permanece constante, el punto de equilibrio:</p>
+                                            <ul class="options"><li class="correct-answer">A) Disminuye</li><li>B) Aumenta</li><li>C) No se ve afectado</li></ul></li>
+                                        <li><p class="question">El costo de la publicidad es un:</p>
+                                            <ul class="options"><li>A) Costo de producción</li><li class="correct-answer">B) Gasto del período</li><li>C) Costo primo</li></ul></li>
+                                        <li><p class="question">El informe de costo de producción es fundamental en el sistema de:</p>
+                                            <ul class="options"><li class="correct-answer">A) Costeo por procesos</li><li>B) Costeo por órdenes de trabajo</li><li>C) Costeo estándar</li></ul></li>
+                                        <li><p class="question">¿Para qué sirve principalmente el análisis del punto de equilibrio?</p>
+                                            <ul class="options"><li>A) Para registrar costos históricos</li><li>B) Para calcular la depreciación</li><li class="correct-answer">C) Para la planeación y toma de decisiones</li></ul></li>
+                                        <li><p class="question">Un costo que tiene un componente fijo y uno variable se denomina:</p>
+                                            <ul class="options"><li>A) Costo directo</li><li class="correct-answer">B) Costo mixto o semivariable</li><li>C) Costo primo</li></ul></li>
+                                        <li><p class="question">El costo de la materia prima que termina como desperdicio normal se considera parte del:</p>
+                                            <ul class="options"><li>A) Gasto administrativo</li><li class="correct-answer">B) Costo del producto (generalmente en CIF)</li><li>C) Gasto de venta</li></ul></li>
+                                        <li><p class="question">¿Cuál es el objetivo de un sistema de acumulación de costos?</p>
+                                            <ul class="options"><li>A) Minimizar los impuestos</li><li class="correct-answer">B) Determinar el costo unitario de un producto o servicio</li><li>C) Preparar el presupuesto maestro</li></ul></li>
+                                        <li><p class="question">Si una empresa quiere obtener una utilidad de $10,000, en el análisis CVU esta cifra se trata como:</p>
+                                            <ul class="options"><li>A) Un costo variable</li><li class="correct-answer">B) Un costo fijo adicional</li><li>C) Un ingreso adicional</li></ul></li>
+                                        <li><p class="question">¿Qué elemento no forma parte del Estado de Costo de Producción?</p>
+                                            <ul class="options"><li>A) Mano de Obra Directa</li><li class="correct-answer">B) Gastos de Venta y Administración</li><li>C) Materia Prima Consumida</li></ul></li>
+                                        <li><p class="question">La principal ventaja del costeo estándar es:</p>
+                                            <ul class="options"><li>A) La simplicidad de cálculo</li><li class="correct-answer">B) Facilitar el control de costos y la evaluación del desempeño</li><li>C) Que solo utiliza datos reales</li></ul></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-4">Bibliografía</h3>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Autor(es)</th>
+                                <th>Año</th>
+                                <th>URL / Ubicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Contabilidad de costos. Tomo I</td>
+                                <td>GAMBOA, SUAREZ et al.</td>
+                                <td>2023</td>
+                                <td>Biblioteca</td>
+                            </tr>
+                            <tr>
+                                <td>Costos y Presupuestos para financieros junior</td>
+                                <td>VÁSQUEZ ROJAS, F. A</td>
+                                <td>2021</td>
+                                <td><a href="https://elibro.net/es/ereader/uisrael/160288" target="_blank">elibro.net</a></td>
+                            </tr>
+                            <tr>
+                                <td>Contabilidad de costos: una herramienta para la toma de decisiones</td>
+                                <td>Ulloa Miranda, Juan Carlos et al.</td>
+                                <td>2024</td>
+                                <td><a href="https://elibro.net/es/ereader/uisrael/228382" target="_blank">elibro.net</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="presupuestos" class="pt-5">
+             <div class="card section-card">
+                <div class="card-header section-card-header p-3" style="background-color: #dc3545;">
+                    <h2 class="h4 mb-0">Asignatura: Presupuestos</h2>
+                </div>
+                 <div class="card-body p-4">
+                     <p><strong>Profesor:</strong> Mg. Carlos Arias (carias@uisrael.edu.ec)</p>
+                     
+                    <h3 class="mt-4">Resumen de la Asignatura</h3>
+                     <p>La asignatura de Presupuestos introduce la planificación financiera a través de la cuantificación de objetivos. Se inicia con los **conceptos y clasificaciones** de los presupuestos, abarcando desde el **presupuesto personal y familiar** hasta los complejos presupuestos empresariales (ventas, producción, gastos). Se estudian **métodos para realizar proyecciones** de variables clave. El curso culmina con la integración de todos los presupuestos operativos y financieros en el **presupuesto maestro**, que es el plan financiero global de una empresa para un período. A partir de este, se elaboran los estados financieros proforma: el **Balance General Proyectado**, el **Estado de Resultados Proyectado** y el **Flujo de Caja Proyectado**, herramientas vitales para la gestión y el control gerencial.</p>
+                     
+                    <h3 class="mt-4">Ejemplos por Tema</h3>
+                    <div class="accordion" id="accordionPresupuestos">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePresupuestos1">
+                                    <strong>1. Conceptos y Clasificación de Presupuestos</strong>
+                                </button>
+                            </h2>
+                            <div id="collapsePresupuestos1" class="accordion-collapse collapse show" data-bs-parent="#accordionPresupuestos">
+                                <div class="accordion-body">
+                                    <p><strong>Ejemplo 1 (Concepto):</strong> Un presupuesto es un plan financiero detallado. Por ejemplo, una tienda de ropa estima que venderá 1,000 camisetas a $20 cada una el próximo trimestre. Su presupuesto de ventas es de $20,000.</p>
+                                    <p><strong>Ejemplo 2 (Clasificación por Flexibilidad):</strong></p>
+                                    <ul>
+                                        <li><strong>Presupuesto Estático:</strong> Se crea para un solo nivel de actividad (vender 10,000 unidades).</li>
+                                        <li><strong>Presupuesto Flexible:</strong> Muestra los resultados esperados para varios niveles de actividad (qué pasaría si se venden 8,000, 10,000 o 12,000 unidades).</li>
+                                    </ul>
+                                    <p><strong>Ejemplo 3 (Clasificación por Período):</strong></p>
+                                     <ul>
+                                        <li><strong>Presupuesto a Corto Plazo:</strong> El presupuesto de gastos mensuales de una familia.</li>
+                                        <li><strong>Presupuesto a Largo Plazo:</strong> El plan de inversión de una empresa para construir una nueva fábrica en los próximos 5 años.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePresupuestos2">
+                                    <strong>2. Presupuesto Personal y Presupuestos Comerciales</strong>
+                                </button>
+                            </h2>
+                            <div id="collapsePresupuestos2" class="accordion-collapse collapse" data-bs-parent="#accordionPresupuestos">
+                                <div class="accordion-body">
+                                     <p><strong>Ejemplo 1 (Presupuesto Familiar):</strong> Una familia con ingresos de $1,500/mes planifica sus gastos: Arriendo $400, Comida $350, Transporte $100, Educación $200, Ocio $150. Su capacidad de ahorro presupuestada es de $300.</p>
+                                    <p><strong>Ejemplo 2 (Presupuesto de Ventas):</strong> Una empresa planea vender 5,000 unidades del Producto A a $10 y 2,000 unidades del Producto B a $25. Su presupuesto total de ventas es (5,000*10) + (2,000*25) = $100,000.</p>
+                                     <p><strong>Ejemplo 3 (Presupuesto de Producción):</strong> La empresa del ejemplo anterior necesita vender 5,000 unidades y quiere tener 500 en inventario final. Si ya tiene 200 en inventario inicial, debe producir: 5,000 + 500 - 200 = 5,300 unidades.</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePresupuestos3">
+                                    <strong>3. Proyecciones y Presupuesto Maestro</strong>
+                                </button>
+                            </h2>
+                            <div id="collapsePresupuestos3" class="accordion-collapse collapse" data-bs-parent="#accordionPresupuestos">
+                                <div class="accordion-body">
+                                     <p><strong>Ejemplo 1 (Método de Proyección):</strong> Para proyectar las ventas del próximo año, una empresa toma el promedio de los últimos 3 años y le aplica un incremento del 5% basado en un análisis de mercado.</p>
+                                    <p><strong>Ejemplo 2 (Presupuesto Maestro):</strong> Es la consolidación de todos los presupuestos individuales (Ventas, Producción, Compras de Materia Prima, Gastos Administrativos, etc.) en un solo documento coherente.</p>
+                                     <p><strong>Ejemplo 3 (Presupuesto de Caja o Flujo de Efectivo):</strong></p>
+                                     <pre class="bg-light p-2 rounded">
+Saldo Inicial de Caja      $5,000
+(+) Entradas de Efectivo:
+    Cobros a clientes      $20,000
+(-) Salidas de Efectivo:
+    Pago a proveedores     ($12,000)
+    Pago de sueldos        ($6,000)
+(=) Saldo Final de Caja    $7,000</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePresupuestos4">
+                                    <strong>4. Estados Financieros Proyectados</strong>
+                                </button>
+                            </h2>
+                            <div id="collapsePresupuestos4" class="accordion-collapse collapse" data-bs-parent="#accordionPresupuestos">
+                                <div class="accordion-body">
+                                     <p>Son el resultado final del presupuesto maestro. Muestran cómo se verá la situación financiera de la empresa si se cumplen las metas del presupuesto.</p>
+                                    <p><strong>Ejemplo 1 (Estado de Resultados Proyectado):</strong> Muestra la utilidad o pérdida esperada, basándose en el presupuesto de ventas y los presupuestos de costos y gastos.</p>
+                                     <p><strong>Ejemplo 2 (Flujo de Caja Proyectado):</strong> Detalla las entradas y salidas de efectivo esperadas, permitiendo anticipar déficits o superávits de liquidez.</p>
+                                     <p><strong>Ejemplo 3 (Balance General Proyectado):</strong> Presenta los activos, pasivos y patrimonio esperados al final del período presupuestario, verificando que la ecuación contable se mantenga en equilibrio.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     
+                    <h3 class="mt-4">Preguntas de Autoevaluación</h3>
+                     <div class="accordion" id="questionsPresupuestos">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuestionsP1">
+                                    Preguntas 1 - 15
+                                </button>
+                            </h2>
+                            <div id="collapseQuestionsP1" class="accordion-collapse collapse show" data-bs-parent="#questionsPresupuestos">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li><p class="question">¿Qué es un presupuesto?</p>
+                                            <ul class="options"><li>A) Un registro de transacciones pasadas</li><li class="correct-answer">B) Un plan financiero cuantitativo para un período futuro</li><li>C) Un estado de la situación financiera actual</li></ul></li>
+                                        <li><p class="question">El punto de partida para elaborar el presupuesto maestro es generalmente el:</p>
+                                            <ul class="options"><li>A) Presupuesto de producción</li><li class="correct-answer">B) Presupuesto de ventas</li><li>C) Presupuesto de caja</li></ul></li>
+                                        <li><p class="question">Un presupuesto que se ajusta a diferentes niveles de actividad se llama:</p>
+                                            <ul class="options"><li>A) Estático</li><li class="correct-answer">B) Flexible</li><li>C) Maestro</li></ul></li>
+                                        <li><p class="question">¿Cuál de los siguientes es un presupuesto operativo?</p>
+                                            <ul class="options"><li class="correct-answer">A) Presupuesto de compras de materia prima</li><li>B) Presupuesto de inversión de capital</li><li>C) Flujo de caja proyectado</li></ul></li>
+                                        <li><p class="question">El presupuesto maestro es:</p>
+                                            <ul class="options"><li>A) Un presupuesto solo para el área de marketing</li><li class="correct-answer">B) La consolidación de todos los presupuestos de una organización</li><li>C) Un presupuesto personal</li></ul></li>
+                                        <li><p class="question">¿Qué estado financiero proyectado muestra la liquidez esperada de la empresa?</p>
+                                            <ul class="options"><li>A) Estado de Resultados Proyectado</li><li class="correct-answer">B) Flujo de Caja Proyectado</li><li>C) Balance General Proyectado</li></ul></li>
+                                        <li><p class="question">El presupuesto de producción se calcula a partir del presupuesto de ventas y de los niveles de:</p>
+                                            <ul class="options"><li>A) Deuda</li><li class="correct-answer">B) Inventario</li><li>C) Inversión</li></ul></li>
+                                        <li><p class="question">Un método de proyección basado en datos históricos y tendencias se conoce como:</p>
+                                            <ul class="options"><li>A) Método de juicio</li><li class="correct-answer">B) Método cuantitativo o estadístico</li><li>C) Presupuesto base cero</li></ul></li>
+                                        <li><p class="question">El Balance General Proyectado muestra:</p>
+                                            <ul class="options"><li>A) La rentabilidad esperada</li><li class="correct-answer">B) La situación financiera esperada (Activos, Pasivos, Patrimonio)</li><li>C) Las entradas y salidas de dinero esperadas</li></ul></li>
+                                        <li><p class="question">Un presupuesto de gastos de administración y ventas forma parte del:</p>
+                                            <ul class="options"><li class="correct-answer">A) Presupuesto operativo</li><li>B) Presupuesto financiero</li><li>C) Presupuesto de capital</li></ul></li>
+                                        <li><p class="question">La principal ventaja de un presupuesto es:</p>
+                                            <ul class="options"><li>A) Garantizar ganancias</li><li class="correct-answer">B) Servir como herramienta de planificación y control</li><li>C) Eliminar la incertidumbre</li></ul></li>
+                                        <li><p class="question">¿Qué elemento NO se encuentra en un flujo de caja proyectado?</p>
+                                            <ul class="options"><li>A) Cobros a clientes</li><li class="correct-answer">B) Depreciación</li><li>C) Pago de préstamos</li></ul></li>
+                                        <li><p class="question">El presupuesto de inversión se enfoca en:</p>
+                                            <ul class="options"><li>A) Gastos operativos diarios</li><li class="correct-answer">B) La compra de activos fijos a largo plazo</li><li>C) El pago de dividendos</li></ul></li>
+                                        <li><p class="question">En un presupuesto familiar, el pago del arriendo es un gasto:</p>
+                                            <ul class="options"><li>A) Variable</li><li class="correct-answer">B) Fijo</li><li>C) Discrecional</li></ul></li>
+                                        <li><p class="question">El resultado final del presupuesto operativo se resume en el:</p>
+                                            <ul class="options"><li>A) Balance general proyectado</li><li class="correct-answer">B) Estado de resultados proyectado</li><li>C) Presupuesto de ventas</li></ul></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuestionsP2">
+                                    Preguntas 16 - 30
+                                </button>
+                            </h2>
+                            <div id="collapseQuestionsP2" class="accordion-collapse collapse" data-bs-parent="#questionsPresupuestos">
+                                <div class="accordion-body">
+                                    <ol start="16">
+                                        <li><p class="question">Un presupuesto que se elabora desde cero cada año, sin basarse en el anterior, es un:</p>
+                                            <ul class="options"><li>A) Presupuesto incremental</li><li class="correct-answer">B) Presupuesto base cero</li><li>C) Presupuesto estático</li></ul></li>
+                                        <li><p class="question">El presupuesto de financiamiento se ocupa de:</p>
+                                            <ul class="options"><li class="correct-answer">A) Obtener préstamos o emitir acciones si hay déficit de caja</li><li>B) Comprar materia prima</li><li>C) Pagar los gastos de publicidad</li></ul></li>
+                                        <li><p class="question">Si las ventas proyectadas son 1,000 unidades y el precio es $50, el ingreso presupuestado es:</p>
+                                            <ul class="options"><li>A) $1,050</li><li class="correct-answer">B) $50,000</li><li>C) No se puede determinar</li></ul></li>
+                                        <li><p class="question">¿Cuál es el objetivo de un presupuesto personal?</p>
+                                            <ul class="options"><li>A) Gastar todo el ingreso</li><li class="correct-answer">B) Controlar los gastos y fomentar el ahorro</li><li>C) Aumentar las deudas</li></ul></li>
+                                        <li><p class="question">La fórmula del presupuesto de producción es:</p>
+                                            <ul class="options"><li>A) Ventas - Inventario Inicial + Inventario Final</li><li class="correct-answer">B) Ventas + Inventario Final Deseado - Inventario Inicial</li><li>C) Ventas + Inventario Inicial - Inventario Final</li></ul></li>
+                                        <li><p class="question">¿Qué presupuesto une el plan de largo plazo con el de corto plazo?</p>
+                                            <ul class="options"><li>A) Presupuesto de ventas</li><li class="correct-answer">B) Presupuesto de capital o inversión</li><li>C) Presupuesto de caja</li></ul></li>
+                                        <li><p class="question">En el contexto de presupuestos, "proyectar" significa:</p>
+                                            <ul class="options"><li>A) Registrar</li><li class="correct-answer">B) Estimar o pronosticar</li><li>C) Auditar</li></ul></li>
+                                        <li><p class="question">Un superávit de caja proyectado significa que:</p>
+                                            <ul class="options"><li>A) Las salidas de efectivo son mayores que las entradas</li><li class="correct-answer">B) Las entradas de efectivo son mayores que las salidas</li><li>C) La empresa no tiene efectivo</li></ul></li>
+                                        <li><p class="question">El Estado de Resultados Proyectado también se conoce como:</p>
+                                            <ul class="options"><li>A) Balance Proforma</li><li class="correct-answer">B) Estado de Pérdidas y Ganancias Proforma</li><li>C) Flujo de Fondos Proyectado</li></ul></li>
+                                        <li><p class="question">La comparación del presupuesto con los resultados reales es parte de la función de:</p>
+                                            <ul class="options"><li>A) Planificación</li><li class="correct-answer">B) Control</li><li>C) Dirección</li></ul></li>
+                                        <li><p class="question">¿Cuál de estos es un presupuesto financiero?</p>
+                                            <ul class="options"><li class="correct-answer">A) Balance General Proyectado</li><li>B) Presupuesto de Producción</li><li>C) Presupuesto de Gastos de Venta</li></ul></li>
+                                        <li><p class="question">En un presupuesto personal, la compra de un café diario es un gasto:</p>
+                                            <ul class="options"><li>A) Fijo obligatorio</li><li class="correct-answer">B) Variable y discrecional</li><li>C) De inversión</li></ul></li>
+                                        <li><p class="question">El presupuesto de compras de materiales depende directamente del:</p>
+                                            <ul class="options"><li>A) Presupuesto de ventas</li><li class="correct-answer">B) Presupuesto de producción</li><li>C) Presupuesto de caja</li></ul></li>
+                                        <li><p class="question">¿Qué es una proyección de ventas?</p>
+                                            <ul class="options"><li>A) El número exacto de unidades que se venderán</li><li class="correct-answer">B) Una estimación informada de las ventas futuras</li><li>C) El registro de las ventas pasadas</li></ul></li>
+                                        <li><p class="question">Los tres estados financieros proforma principales son:</p>
+                                            <ul class="options"><li>A) Diario, Mayor y Balance de Comprobación proyectados</li><li class="correct-answer">B) Estado de Resultados, Flujo de Caja y Balance General proyectados</li><li>C) Presupuesto de Ventas, Producción y Gastos</li></ul></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-4">Bibliografía y Otras Fuentes</h3>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Autor(es)</th>
+                                <th>Año</th>
+                                <th>URL / Ubicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Presupuestos un enfoque Gerencial</td>
+                                <td>Pacheco Coello, C. E.</td>
+                                <td>2020</td>
+                                <td><a href="https://elibro.net/es/lc/uisrael/titulos/151225" target="_blank">elibro.net</a></td>
+                            </tr>
+                            <tr>
+                                <td>Costos y Presupuestos para financieros junior</td>
+                                <td>Vásquez Rojas, F. A.</td>
+                                <td>2021</td>
+                                <td><a href="https://elibro.net/es/lc/uisrael/titulos/160288" target="_blank">elibro.net</a></td>
+                            </tr>
+                            <tr>
+                                <td>Presupuestos en Excel. 1</td>
+                                <td>Buitrago Ibáñez, J. V.</td>
+                                <td>2021</td>
+                                <td><a href="https://elibro.net/es/lc/uisrael/titulos/219237" target="_blank">elibro.net</a></td>
+                            </tr>
+                             <tr>
+                                <td>Presentación Proforma 2024</td>
+                                <td>Ministerio de Economía y Finanzas</td>
+                                <td>2024</td>
+                                <td><a href="https://www.finanzas.gob.ec/wp-content/uploads/downloads/2024/02/Presentacion-PROFORMA-2024_formato-ciudadano-vf.pdf" target="_blank">finanzas.gob.ec</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="bg-dark text-white text-center p-3">
+        <div class="container">
+            <p>&copy; 2025 Guía de Estudio. Contenido generado con fines académicos.</p>
+        </div>
+    </footer>
+    
+    <a href="#" class="btn btn-primary back-to-top" id="btnBackToTop" title="Volver arriba">▲</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Back to top button
+        const btnBackToTop = document.getElementById('btnBackToTop');
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btnBackToTop.style.display = "block";
+            } else {
+                btnBackToTop.style.display = "none";
+            }
+        };
+        btnBackToTop.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
